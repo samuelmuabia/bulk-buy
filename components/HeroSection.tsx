@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Head from "next/head";
 import {
   Box,
   Heading,
@@ -9,7 +9,8 @@ import {
   Icon,
   useColorModeValue,
   createIcon,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
+import heroImage from '@/images/hero.jpg';
 
 export default function HeroSection() {
   return (
@@ -20,75 +21,93 @@ export default function HeroSection() {
           rel="stylesheet"
         />
       </Head>
-
-      <Container maxW={'3xl'}>
-        <Stack
-          as={Box}
-          textAlign={'center'}
-          spacing={{ base: 8, md: 14 }}
-          py={{ base: 20, md: 36 }}>
-          <Heading
-            fontWeight={600}
-            fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
-            lineHeight={'110%'}>
-            Make money from <br />
-            <Text as={'span'} color={'green.400'}>
-              your audience
-            </Text>
-          </Heading>
-          <Text color={'gray.500'}>
-            Monetize your content by charging your most loyal readers and reward
-            them loyalty points. Give back to your loyal readers by granting
-            them access to your pre-releases and sneak-peaks.
-          </Text>
+      <Box bg="url('hero.jpg')" bgSize="cover" bgPosition="center">
+        <Container maxW={"3xl"}>
           <Stack
-            direction={'column'}
-            spacing={3}
-            align={'center'}
-            alignSelf={'center'}
-            position={'relative'}>
-            <Button
-              colorScheme={'green'}
-              bg={'green.400'}
-              rounded={'full'}
-              px={6}
-              _hover={{
-                bg: 'green.500',
-              }}>
-              Get Started
-            </Button>
-            <Button variant={'link'} colorScheme={'blue'} size={'sm'}>
-              Learn more
-            </Button>
-            <Box>
-              <Icon
-                as={Arrow}
-                color={useColorModeValue('gray.800', 'gray.300')}
-                w={71}
-                position={'absolute'}
-                right={-71}
-                top={'10px'}
-              />
-              <Text
-                fontSize={'lg'}
-                fontFamily={'Caveat'}
-                position={'absolute'}
-                right={'-125px'}
-                top={'-15px'}
-                transform={'rotate(10deg)'}>
-                Starting at $15/mo
+            as={Box}
+            textAlign={"center"}
+            spacing={{ base: 8, md: 10 }}
+            py={{ base: 20, md: 20 }}
+          >
+            <Heading
+              fontWeight={600}
+              fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
+              lineHeight={"110%"}
+            >
+              Looking for
+              <br />
+              <Text as={"span"} color={"green.400"}>
+                Affordable
+              </Text>{" "}
+              and{" "}
+              <Text as={"span"} color={"yellow.400"}>
+                Quality{" "}
               </Text>
-            </Box>
+              Clothing?
+            </Heading>
+            <Text color={"gray.500"}>
+              Sour deals? Not here. Lemons Clothing offers premium bulk
+              merchandise at unbeatable prices, so you can look great without
+              breaking the bank.
+            </Text>
+            <Stack
+              direction={"column"}
+              spacing={3}
+              align={"center"}
+              alignSelf={"center"}
+              position={"relative"}
+            >
+              <Button
+                colorScheme={"green"}
+                color={"black.300"}
+                bg={"yellow.400"}
+                rounded={"full"}
+                px={6}
+                _hover={{
+                  bg: "green.500",
+                  color: "white",
+                }}
+              >
+                Shop Today
+              </Button>
+              {/* <a href="https://discord.com/users/853654569145729055/dm?message=Hello%2C%20I%20want%20to%20know%20more%20about%20Lemon%27s%20Clothing%2E"> */}
+              <a href="https://wa.me/8801778853386?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20products.">
+                <Button variant={"link"} colorScheme={"blue"} size={"sm"}>
+                  Know more
+                </Button>
+              </a>
+
+              <Box>
+                <Icon
+                  as={Arrow}
+                  color={useColorModeValue("gray.800", "gray.300")}
+                  w={71}
+                  position={"absolute"}
+                  right={-71}
+                  top={"10px"}
+                />
+                <Text
+                  fontSize={"lg"}
+                  fontFamily={"Caveat"}
+                  position={"absolute"}
+                  right={"-125px"}
+                  top={"-15px"}
+                  transform={"rotate(10deg)"}
+                >
+                  Starting at $5/tees
+                </Text>
+              </Box>
+            </Stack>
           </Stack>
-        </Stack>
-      </Container>
+        </Container>
+      </Box>
     </>
   );
 }
 
 const Arrow = createIcon({
-  displayName: 'Arrow',
-  viewBox: '0 0 72 24',
+  displayName: "Arrow",
+  viewBox: "0 0 72 24",
   path: (
     <path
       fillRule="evenodd"

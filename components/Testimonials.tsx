@@ -9,7 +9,6 @@ import {
   Avatar,
   useColorModeValue,
 } from '@chakra-ui/react';
-
 const Testimonial = ({ children }: { children: ReactNode }) => {
   return <Box>{children}</Box>;
 };
